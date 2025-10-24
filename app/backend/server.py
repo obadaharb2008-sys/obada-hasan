@@ -12,7 +12,8 @@ import uuid
 from datetime import datetime, timezone
 import base64
 from io import BytesIO
-from ai_service import ai_service
+from .ai_service import ai_service
+
 
 
 # Configure logging FIRST (before any usage)
