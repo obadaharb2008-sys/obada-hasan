@@ -1,0 +1,126 @@
+.education-section {
+  background: #0f0f0f;
+  padding: 100px 20px;
+}
+
+.education-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.education-icon {
+  color: #ffffff;
+  animation: iconFloat 3s infinite ease-in-out;
+}
+
+.schools-card {
+  background: #1a1a1a !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: clamp(20px, 3vw, 28px) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.table-head {
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 20px 16px !important;
+  text-align: center !important;
+  border-bottom: 3px solid #555555 !important;
+}
+
+.table-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease;
+}
+
+.table-row:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  transform: translateX(4px);
+}
+
+.table-cell {
+  color: #d0d0d0 !important;
+  padding: 18px 16px !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.table-cell.school-name {
+  font-weight: 600;
+  color: #c0c0c0 !important;
+  font-size: 17px !important;
+  text-align: center !important;
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.table-wrapper table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.table-wrapper table tbody tr:first-child {
+  background: transparent;
+}
+
+.schools-card .card-title {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .education-section {
+    padding: 60px 16px;
+  }
+
+  .education-header {
+    margin-bottom: 40px;
+  }
+
+  .table-head,
+  .table-cell {
+    padding: 12px !important;
+    font-size: 13px !important;
+  }
+
+  .table-head {
+    font-size: 13px !important;
+  }
+}

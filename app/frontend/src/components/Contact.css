@@ -1,0 +1,158 @@
+.contact-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 100px 20px;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-description {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #b0b0b0;
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto 48px;
+}
+
+.social-link {
+  text-decoration: none;
+  width: 100%;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 20px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.whatsapp-btn {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+  border-color: #ffffff;
+}
+
+.whatsapp-btn:hover {
+  background: #e5e5e5 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.youtube-btn {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: #ffffff;
+}
+
+.youtube-btn:hover {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.download-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.download-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.download-description {
+  font-size: 16px;
+  color: #b0b0b0;
+  margin-bottom: 24px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.download-link {
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.download-btn {
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease;
+}
+
+.download-btn.secondary {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.download-btn.secondary:hover {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+}
+
+.contact-info {
+  margin-top: 48px;
+}
+
+.contact-note {
+  font-size: 16px;
+  color: #808080;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 16px;
+  }
+
+  .social-buttons {
+    max-width: 100%;
+  }
+
+  .social-btn {
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+}

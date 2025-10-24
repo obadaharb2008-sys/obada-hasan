@@ -1,0 +1,125 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://obada-portfolio.onrender.com#person",
+      "name": "عيادة غسان حسن",
+      "alternateName": "Obada G. Hasan",
+      "url": "https://obada-portfolio.onrender.com",
+      "image": "https://obada-portfolio.onrender.com/obada.jpeg",
+      "jobTitle": "IT Specialist Level 3",
+      "areaServed": "Jordan",
+      "description": "أخصائي تكنولوجيا معلومات متخصص في برامج BTEC المستوى 3 من الأردن",
+      "knowsLanguage": ["ar", "en"],
+      "knowsAbout": [
+        "Information Technology",
+        "BTEC Education Level 3",
+        "Web Development",
+        "Programming",
+        "Cybersecurity",
+        "Network Management",
+        "Mobile App Development",
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://obada-portfolio.onrender.com#organization",
+      "name": "البيت التعليمي لتكنولوجيا المعلومات",
+      "alternateName": "IT Education Center | Al-Bayt Al-Tarbawi",
+      "url": "https://obada-portfolio.onrender.com",
+      "image": "https://obada-portfolio.onrender.com/obada.jpeg",
+      "description": "مركز تدريب متخصص في برامج BTEC Level 3 والبرمجة والأمن السيبراني وتطوير الويب والتطبيقات الذكية في الأردن",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Jordan",
+        "geo": {
+          "@type": "GeoShape",
+          "box": "31.3 34.3 33.4 36.4"
+        }
+      },
+      "founder": {
+        "@type": "Person",
+        "@id": "https://obada-portfolio.onrender.com#person"
+      },
+      "knowsAbout": [
+        "BTEC Level 2",
+        "BTEC Level 3",
+        "Programming Languages",
+        "Cybersecurity",
+        "Web Development",
+        "Mobile Development",
+        "Network Management",
+        "Artificial Intelligence",
+        "IT Project Management"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+962",
+        "contactType": "Education Support",
+        "url": "https://chat.whatsapp.com/CnxwVXucXJl9JmAj28Umdg"
+      },
+      "sameAs": [
+        "https://youtube.com/@noobada1?si=sFvrslYzfM2jwYo-",
+        "https://chat.whatsapp.com/CnxwVXucXJl9JmAj28Umdg"
+      ]
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "@id": "https://obada-portfolio.onrender.com#credential",
+      "name": "BTEC Level 3 IT Specialist",
+      "credentialCategory": "qualification",
+      "educationalLevel": "Level 3",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Pearson BTEC"
+      },
+      "skills": [
+        "Programming",
+        "Cybersecurity",
+        "Web Development",
+        "Network Management",
+        "Database Administration",
+        "Mobile Application Development",
+        "IT Project Management"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://obada-portfolio.onrender.com#course1",
+      "name": "برامج BTEC Level 3 متقدمة",
+      "description": "برامج تدريب متقدمة في تكنولوجيا المعلومات بمستوى BTEC 3",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "@id": "https://obada-portfolio.onrender.com#organization"
+      },
+      "areaServed": "Jordan",
+      "inLanguage": ["ar", "en"]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://obada-portfolio.onrender.com#course2",
+      "name": "تدريب البرمجة والويب",
+      "description": "دورات متخصصة في البرمجة وتطوير تطبيقات الويب والهاتف",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "@id": "https://obada-portfolio.onrender.com#organization"
+      },
+      "areaServed": "Jordan",
+      "inLanguage": ["ar", "en"]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://obada-portfolio.onrender.com#course3",
+      "name": "الأمن السيبراني وإدارة الشبكات",
+      "description": "برامج تدريب شاملة في الأمن السيبراني وإدارة الشبكات",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "@id": "https://obada-portfolio.onrender.com#organization"
+      },
+      "areaServed": "Jordan",
+      "inLanguage": ["ar", "en"]
+    }
+  ]
+}

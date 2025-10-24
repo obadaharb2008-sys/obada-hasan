@@ -1,0 +1,38 @@
+# Search Engine Crawlers
+# Allow all search engines to crawl and index the entire site
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
+Disallow: /.env*
+Disallow: /node_modules/
+Disallow: /build/
+
+# Google Bot - Specific rules
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+Crawl-delay: 0.5
+
+# Bing Bot - Specific rules
+User-agent: Bingbot
+Allow: /
+Disallow: /private/
+Crawl-delay: 1
+
+# Yandex Bot
+User-agent: YandexBot
+Allow: /
+Disallow: /private/
+
+# Crawl delay for all bots (in seconds)
+Crawl-delay: 1
+Request-rate: 30/60  # 30 requests per 60 seconds
+
+# Sitemaps
+Sitemap: https://obada-portfolio.onrender.com/sitemap.xml
+
+# Comments for optimization
+# This site is an educational and professional portfolio
+# for IT training and BTEC Level 3 education in Jordan
