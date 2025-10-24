@@ -4,7 +4,7 @@ services:
     name: obada-portfolio-frontend
     runtime: node
     buildCommand: cd app/frontend && npm install && npm run build
-    startCommand: cd app/frontend && npm install -g serve && serve -s build -l 3000
+    startCommand: cd app/frontend && npx serve -s build -l 3000
     numInstances: 1
     envVars:
       - key: REACT_APP_API_URL
@@ -25,7 +25,7 @@ services:
     runtime: python
     pythonVersion: 3.11
     buildCommand: pip install -r app/backend/requirements.txt
-    startCommand: cd app && uvicorn backend.server:app --host 0.0.0.0 --port $PORT --workers 4
+    startCommand: cd app && gunicorn -w 4 -k uvicorn.workers.UvicornWorker --timeout 120 backend.server:app
     numInstances: 1
     envVars:
       - key: PYTHONUNBUFFERED
@@ -40,7 +40,5 @@ services:
         value: "portfolio_db"
       - key: CHATBASE_CHATBOT_ID
         value: "gWvWe8QFeq_IVVm0vDONf"
-      - key: PORT
-        value: "10000"
     healthCheckPath: /api/health
     healthCheckInterval: 30

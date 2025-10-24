@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, File, UploadFile, Form
+from fastapi import FastAPI, APIRouter, File, UploadFile, Form, Response
 from fastapi.responses import StreamingResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
@@ -12,7 +12,7 @@ import uuid
 from datetime import datetime, timezone
 import base64
 from io import BytesIO
-from .ai_service import ai_service
+from ai_service import ai_service
 
 
 
@@ -39,6 +39,10 @@ except Exception as e:
 
 # Create the main app without a prefix
 app = FastAPI(title="Portfolio Backend API", version="1.0.0")
+
+# Add middleware for compression and performance
+from fastapi.middleware.gzip import GZipMiddleware
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")

@@ -7,7 +7,7 @@ export const personalInfo = {
   },
   name: {
     en: "Obada G. Hasan",
-    ar: "عيادة غسان حسن"
+    ar: "عبادة غسان حسن"
   },
   title: {
     en: "IT Specialist - Level 3",

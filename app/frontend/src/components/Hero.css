@@ -166,12 +166,33 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
   .hero-container {
     padding: 0 20px;
   }
 
+  .hero-content {
+    margin-top: 20px;
+  }
+
   .hero-title {
-    min-height: 80px;
+    font-size: clamp(28px, 6vw, 48px);
+    min-height: auto;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(16px, 2.5vw, 24px);
+    margin-bottom: 12px;
+  }
+
+  .hero-description {
+    font-size: clamp(14px, 1.8vw, 16px);
   }
 
   .scroll-indicator {
