@@ -5,6 +5,7 @@ services:
     runtime: node
     buildCommand: cd app/frontend && npm install && npm run build
     startCommand: cd app/frontend && npm install -g serve && serve -s build -l 3000
+    numInstances: 1
     envVars:
       - key: REACT_APP_API_URL
         fromService:
@@ -15,6 +16,7 @@ services:
         value: production
     staticPublishPath: app/frontend/build
     healthCheckPath: /
+    healthCheckInterval: 30
     pullRequestPreviewsEnabled: true
 
   # Backend Service
@@ -23,10 +25,11 @@ services:
     runtime: python
     pythonVersion: 3.11
     buildCommand: pip install -r app/backend/requirements.txt
-    startCommand: uvicorn app.backend.server:app --host 0.0.0.0 --port $PORT
+    startCommand: cd app && uvicorn backend.server:app --host 0.0.0.0 --port $PORT --workers 4
+    numInstances: 1
     envVars:
       - key: PYTHONUNBUFFERED
-        value: "true"
+        value: "1"
       - key: ENVIRONMENT
         value: production
       - key: CORS_ORIGINS
@@ -35,7 +38,9 @@ services:
         sync: false
       - key: DB_NAME
         value: "portfolio_db"
+      - key: CHATBASE_CHATBOT_ID
+        value: "gWvWe8QFeq_IVVm0vDONf"
+      - key: PORT
+        value: "10000"
     healthCheckPath: /api/health
-    routes:
-      - path: /api/*
-        service: obada-portfolio-backend
+    healthCheckInterval: 30
