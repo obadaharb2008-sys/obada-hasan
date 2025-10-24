@@ -23,16 +23,18 @@ services:
     runtime: python
     pythonVersion: 3.11
     buildCommand: pip install -r app/backend/requirements.txt
-    startCommand: cd app/backend && uvicorn server:app --host 0.0.0.0 --port 5000
+    startCommand: uvicorn app.backend.server:app --host 0.0.0.0 --port $PORT
     envVars:
-      - key: PORT
-        value: 5000
       - key: PYTHONUNBUFFERED
         value: "true"
       - key: ENVIRONMENT
         value: production
       - key: CORS_ORIGINS
         value: "*"
+      - key: MONGO_URL
+        sync: false
+      - key: DB_NAME
+        value: "portfolio_db"
     healthCheckPath: /api/health
     routes:
       - path: /api/*
